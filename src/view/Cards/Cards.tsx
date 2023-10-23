@@ -3,9 +3,18 @@ import Card from '../../components/Card'
 
 function Cards() {
   return (
-    <div>
+    <div className="">
+      <p className=''>askdjasl</p>
+      <div className=' grid grid-cols-3 '>
+        <Card title='resim1' imageSrc={require('../../assets/renders/1.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/2.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/3.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/4.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/5.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/6.jpeg') }></Card>
+        <Card title='resim1' imageSrc={require('../../assets/renders/7.jpeg') }></Card>
 
-        <Card title='resim1' imageSrc='https://images.pexels.com/photos/18795067/pexels-photo-18795067/free-photo-of-kent-kent-simgesi-ufuk-cizgisi-bina.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' ></Card>
+  </div>
     </div>
   )
 }
