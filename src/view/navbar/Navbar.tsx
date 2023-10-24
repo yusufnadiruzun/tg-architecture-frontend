@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-blue-50 p-4 flex justify-between items-center">
       <div className="flex items-center">
         {/* <img src="logo.png" alt="Logo" className="h-10 w-10" /> */}
-        <p>TG ARCHITECT</p>
+        <p className='text-lg font-semibold'>TG ARCHITECT</p>
       </div>
       <ul className="hidden md:flex space-x-6 ">
         <li>
