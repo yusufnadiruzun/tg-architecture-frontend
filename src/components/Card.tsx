@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import React from "react";
 
-function ColoredImage({ src, alt }: { src: string; alt: string }) {
+function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;projectName:string}) {
   const [isColored, setColored] = useState(false);
 
   const toggleColor = () => {
@@ -11,15 +11,15 @@ function ColoredImage({ src, alt }: { src: string; alt: string }) {
   // Resmin stili değiştirilmiş hali, "isColored" değerine bağlı olarak değişir.
   const imageStyle = {
     filter: isColored ? "none" : "grayscale(100%) contrast(110%)  saturate(3)",
-    width: "80%",
+    width: "95%",
     margin:"auto",
-    height: "90%",
-    
+    height: "300px",
     transition: "filter 1s ease", // CSS geçiş efekti, 2 saniyede gerçekleşir
+    padding:"1px"
   };
 
   return (
-    
+    <div className="">
     <img
     className="rounded-t-lg shadow-2xl"
       style={imageStyle}
@@ -28,16 +28,17 @@ function ColoredImage({ src, alt }: { src: string; alt: string }) {
       onMouseEnter={toggleColor}
       onMouseLeave={toggleColor}
     />
-   
+    <p className="text-center font-serif sm:text-sm xs:mt-4   md:text-xl md:mt-4">{projectName}</p>
+    </div>
   );
 }
 
-function Card({ imageSrc, title }: { imageSrc: string; title: string }) {
+function Card({ imageSrc, title,name }: { imageSrc: string; title: string; name: string }) {
   return (
-    <div className="p-1 ">
-      <ColoredImage src={imageSrc} alt={title} />
-    </div>
-  );
+      
+      <ColoredImage src={imageSrc} alt={title} projectName={name} />
+      
+    );
 }
 
 

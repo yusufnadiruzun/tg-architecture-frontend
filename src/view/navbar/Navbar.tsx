@@ -9,19 +9,20 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white-500 p-4 flex justify-between items-center">
+    <nav className="bg-blue-50 p-4 flex justify-between items-center">
       <div className="flex items-center">
-        <img src="logo.png" alt="Logo" className="h-10 w-10" />
+        {/* <img src="logo.png" alt="Logo" className="h-10 w-10" /> */}
+        <p>TG ARCHITECT</p>
       </div>
-      <ul className="hidden md:flex space-x-6">
+      <ul className="hidden md:flex space-x-6 ">
         <li>
-          <a href="/hakkimizda" className="text-white hover:text-yellow-300">Hakkımızda</a>
+          <a href="/hakkimizda" className="text-black font-serif  hover:text-yellow-300">Hakkımızda</a>
         </li>
         <li>
-          <a href="/projeler" className="text-white hover:text-yellow-300">Projeler</a>
+          <a href="/projeler" className="text-black font-serif hover:text-yellow-300">Projeler</a>
         </li>
         <li>
-          <a href="/iletisim" className="text-white hover:text-yellow-300">İletişim</a>
+          <a href="/iletisim" className="text-black font-serif hover:text-yellow-300">İletişim</a>
         </li>
       </ul>
       <div className="md:hidden">
