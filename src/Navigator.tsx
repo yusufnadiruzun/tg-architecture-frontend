@@ -29,9 +29,10 @@ function Navigator() {
             }
           />
           <Route
-            path="/tunahangor.com/about"
+            path="/hakkimizda"
             element={
               <div>
+                <Navbar></Navbar>
                 <About></About>
               </div>
             }

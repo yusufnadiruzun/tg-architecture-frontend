@@ -10,10 +10,10 @@ function AnimatedComponent({ children }: { children: React.ReactNode }) {
       // Element sayfanın görünür bölümüne geldiğinde animasyonu başlat
       const element = elementRef.current;
       if (element && isElementInViewport(element)) {
-        element.classList.add('animate__animated', 'animate__wobble');
+        element.classList.add('animate__animated', 'animate__pulse');
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
     // Sayfa yüklendiğinde de kontrol edelim
     handleScroll();
@@ -62,7 +62,7 @@ function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;proj
   return (
     <div className="">
     <img
-    className="rounded-t-lg shadow-2xl  animate__animated animate__wobble"
+    className="rounded-t-lg shadow-2xl  animate__animated animate__pulse"
       style={imageStyle}
       src={isColored ? src : `${src}`}
       alt={alt}
