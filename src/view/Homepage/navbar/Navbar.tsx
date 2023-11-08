@@ -12,7 +12,7 @@ function Navbar() {
     <nav className="bg-blue-50 p-4 flex justify-between items-center">
       <div className="flex items-center">
         {/* <img src="logo.png" alt="Logo" className="h-10 w-10" /> */}
-        <a className='text-lg font-semibold' href='/tunahangor.com'>TG ARCHITECT</a>
+        <a className='text-xl font-bold' href='/tunahangor.com'>Asoft Architects</a>
       </div>
       <ul className="hidden md:flex space-x-6 ">
         <li>

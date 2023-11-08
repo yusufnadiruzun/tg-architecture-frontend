@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "./view/navbar/Navbar";
-import Carousel from "./view/Carousel/Carousel";
-import Cards from "./view/Cards/Cards";
-import Footer from "./view/Footer/Footer";
-import Homepage from "./view/Homepage";
+import Navbar from "./view/Homepage/navbar/Navbar";
+import Homepage from "./view/Homepage/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./view/About";
+import About from "./view/About/About";
+import Login from "./view/Admin/Login";
+import Projects from "./view/Projects/Projects";
 
 function Navigator() {
   return (
@@ -34,6 +33,23 @@ function Navigator() {
               <div>
                 <Navbar></Navbar>
                 <About></About>
+              </div>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <div>
+                <Login></Login>
+              </div>
+            }
+          />
+           <Route
+            path="/projeler"
+            element={
+              <div>
+                 <Navbar></Navbar>
+                <Projects></Projects>
               </div>
             }
           />

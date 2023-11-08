@@ -53,7 +53,7 @@ function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;proj
     filter: isColored ? "none"  : "grayscale(100%) contrast(110%) brightness(0.7)  saturate(3)",
     width: "95%",
     margin:"auto",
-    marginTop:"100px",
+    marginTop:"70px",
     height: "300px",
     transition: "filter 1s ease", // CSS geçiş efekti, 2 saniyede gerçekleşir
     padding:"1px"
@@ -75,10 +75,10 @@ function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;proj
 }
 
 
-function Card({ imageSrc, title, name }: { imageSrc: string; title: string; name: string }) {
+function Card({ imageSrc, title, name, onclick }: { imageSrc: string; title: string; name: string,onclick?:() => void }) {
   return (
-    <AnimatedComponent>
-      <ColoredImage src={imageSrc} alt={title} projectName={name} />
+    <AnimatedComponent >
+      <ColoredImage src={imageSrc} alt={title} projectName={name}/>
     </AnimatedComponent>
   );
 }

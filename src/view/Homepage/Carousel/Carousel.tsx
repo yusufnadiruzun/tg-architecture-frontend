@@ -5,23 +5,23 @@ function Carousel() {
     <div className="col-xxl-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0  animate__animated animate__slideInDown">
     <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
-        <div className="carousel-item active" data-bs-interval="200" >
+        <div className="carousel-item active" data-bs-interval="2000" >
           <img
-            src={require('../../assets/renders/132.jpg')}
+            src={require('../../../assets/renders/132.jpg')}
             className=" w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-fill"
             alt="..."
           ></img>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item" data-bs-interval="2008">
           <img
-            src={require('../../assets/renders/123.jpg')}
+            src={require('../../../assets/renders/123.jpg')}
             className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-fill"
             alt="..."
           ></img>
         </div>
-        <div className="carousel-item">
+        <div className="carousel-item" data-bs-interval="2005">
           <img
-            src="https://gineersnow.com/wp-content/uploads/2017/01/Masdar-City_Architecture-21.jpg"
+            src={require('../../../assets/renders/123.jpg')}
             className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] object-fill"
             alt="..."
           ></img>

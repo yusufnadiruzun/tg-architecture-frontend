@@ -9,7 +9,7 @@ function About() {
         <p className="text-center p-4 text-3xl font-serif">Mimar - Tunahan Gör</p>
         <img 
         className={imgStyle.img}
-        src={require("../assets/renders/tg.jpeg")}></img>
+        src={require("../../assets/renders/tg.jpeg")}></img>
       </div>
       <div> 
         <p className="text-center font-serif mt-44">
@@ -54,10 +54,10 @@ function About() {
         </p>
       </div>
       <div>
-        <p className="text-center p-4 text-3xl font-serif">Mühendis - Yusuf Nadir Uzun</p>
+        <p className="text-center p-4 text-3xl font-serif">Mimar - Ahmet Kaplan</p>
         <img 
         className={imgStyle.img}
-        src={require("../assets/renders/nadir42.jpg")}></img>
+        src={require("../../assets/renders/ahmet.jpeg")}></img>
       </div>
       
     </div>
