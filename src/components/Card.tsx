@@ -3,7 +3,7 @@ import React from "react";
 import 'animate.css'; 
 
 
-function AnimatedComponent({ children }: { children: React.ReactNode }) {
+function AnimatedComponent({ children, onClick }: { children: React.ReactNode;onClick ?:() => void }) {
   const elementRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +41,7 @@ function AnimatedComponent({ children }: { children: React.ReactNode }) {
   );
 }
 
-function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;projectName:string}) {
+function ColoredImage({ src,projectName ,alt, onClick ,dark = true }: { src: string; alt: string ;projectName:string; onClick ?: () =>void; dark ?: boolean}) {
   const [isColored, setColored] = useState(false);
 
   const toggleColor = () => {
@@ -50,20 +50,23 @@ function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;proj
 
   // Resmin stili değiştirilmiş hali, "isColored" değerine bağlı olarak değişir.
   const imageStyle = {
-    filter: isColored ? "none"  : "grayscale(100%) contrast(110%) brightness(0.7)  saturate(3)",
+    filter: dark ? (isColored ? "none"  : "grayscale(100%) contrast(110%) brightness(0.7)  saturate(3)") : "none",
     width: "95%",
     margin:"auto",
     marginTop:"70px",
     height: "300px",
     transition: "filter 1s ease", // CSS geçiş efekti, 2 saniyede gerçekleşir
     padding:"1px"
+    
   };
 
   return (
     <div className="">
     <img
+    onClick={onClick}
     className="rounded-t-lg shadow-2xl  animate__animated animate__pulse"
       style={imageStyle}
+      
       src={isColored ? src : `${src}`}
       alt={alt}
       onMouseEnter={toggleColor}
@@ -75,10 +78,10 @@ function ColoredImage({ src,projectName ,alt }: { src: string; alt: string ;proj
 }
 
 
-function Card({ imageSrc, title, name, onclick }: { imageSrc: string; title: string; name: string,onclick?:() => void }) {
+function Card({ imageSrc, title, name, dark,onClick }: { imageSrc: string; title: string; name: string,onClick?:() => void; dark?:boolean }) {
   return (
     <AnimatedComponent >
-      <ColoredImage src={imageSrc} alt={title} projectName={name}/>
+      <ColoredImage  src={imageSrc} alt={title} projectName={name} onClick={onClick} dark={dark} />
     </AnimatedComponent>
   );
 }
