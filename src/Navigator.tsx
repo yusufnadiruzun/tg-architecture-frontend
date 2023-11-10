@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./view/About/About";
 import Login from "./view/Admin/Login";
 import Projects from "./view/Projects/Projects";
+import Proje from "./view/Projects/Proje";
 
 function Navigator() {
   return (
@@ -50,6 +51,15 @@ function Navigator() {
               <div>
                  <Navbar></Navbar>
                 <Projects></Projects>
+              </div>
+            }
+          />
+           <Route
+            path="/proje"
+            element={
+              <div>
+                 <Navbar></Navbar>
+                <Proje></Proje>
               </div>
             }
           />

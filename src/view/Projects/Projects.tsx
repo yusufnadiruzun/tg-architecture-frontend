@@ -6,7 +6,7 @@ function Projects() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-      navigate("/hakkimizda");
+      navigate("/proje");
   }
   return (
     <div>

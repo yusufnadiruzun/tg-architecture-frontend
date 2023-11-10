@@ -14,6 +14,7 @@ function Cards() {
         <Card title='resim1' name="bitti" imageSrc={require('../../../assets/renders/6.jpeg') }></Card>
         <Card title='resim1' name='kulaklık' imageSrc={require('../../../assets/renders/7.jpeg') }></Card>
       </div>
+      
     </div>
   )
 }

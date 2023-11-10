@@ -1,18 +1,22 @@
 import React from "react";
 
 function About() {
-  const imgStyle = {img : "mx-auto rounded-lg h-auto w-96 mb-10 shadow-2xl"}
-  ;
+
+  const imgClass = {img : "mx-auto rounded-lg h-auto w-96 mb-10 shadow-2xl"}
+  const titleClass = {title : "text-center p-4 sm:text-3xl font-serif"}
+  const containerClass = {container: "grid md:grid-cols-2  px-20 mt-16"}
+  const textClass = {text:"text-center font-serif mt-44"}
+  
   return (
-    <div className="grid grid-cols-2 gap-x-6 px-20 mt-16">
+    <div className={containerClass.container}>
       <div>
-        <p className="text-center p-4 text-3xl font-serif">Mimar - Tunahan Gör</p>
+        <p className={titleClass.title}>Mimar Tunahan Gör</p>
         <img 
-        className={imgStyle.img}
+        className={imgClass.img}
         src={require("../../assets/renders/tg.jpeg")}></img>
       </div>
       <div> 
-        <p className="text-center font-serif mt-44">
+        <p className={textClass.text}>
           Tunahan Gör is an Istanbul-based independent architect
           concentrating on residences, housing projects, offices and mixed-use
           developments in architecture, urban design and interior design.
@@ -33,7 +37,7 @@ function About() {
         </p>
       </div>
       <div> 
-        <p className="text-center font-serif mt-44">
+      <p className={textClass.text}>
           Tunahan Gör is an Istanbul-based independent architect
           concentrating on residences, housing projects, offices and mixed-use
           developments in architecture, urban design and interior design.
@@ -54,9 +58,9 @@ function About() {
         </p>
       </div>
       <div>
-        <p className="text-center p-4 text-3xl font-serif">Mimar - Ahmet Kaplan</p>
+        <p className={titleClass.title}>Mimar Ahmet Kaplan</p>
         <img 
-        className={imgStyle.img}
+        className={imgClass.img}
         src={require("../../assets/renders/ahmet.jpeg")}></img>
       </div>
       

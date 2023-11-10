@@ -7,7 +7,6 @@ import Footer from './Footer/Footer'
 function Homepage() {
   return (
     <div>
-      
         <Navbar></Navbar>
         <Carousel></Carousel>
         <Cards></Cards>
